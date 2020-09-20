@@ -58,7 +58,7 @@ p6_kubernetes_prompt_info() {
     local str
 
     if ! p6_string_blank "$KUBECONFIG"; then
-      str="kube:   "
+      str="kube:     "
     fi
     if ! p6_string_blank "$P6_KUBE_CFG"; then
       str="${str}ctx=[$P6_KUBE_CFG]"
