@@ -28,24 +28,6 @@ p6df::modules::p6kubernetes::init() { }
 ######################################################################
 #<
 #
-# Function: p6_kubernetes_status()
-#
-#>
-######################################################################
-p6_kubernetes_status() {
-
-  local resource_types="configmaps deployment ingress pods pvc svc secret statefulset"
-
-  local type
-  for type in $(p6_echo $resource_types); do
-    p6_h1 "$type"
-    kubectl get $type -A
-  done
-}
-
-######################################################################
-#<
-#
 # Function: p6_kubernetes_prompt_info()
 #
 #  Returns:
@@ -72,4 +54,19 @@ p6_kubernetes_prompt_info() {
     else
       p6_return_str "$str"
     fi
+}
+
+p6_kubernetes_deployment_of_image() {
+  local image="$1"
+
+  local str
+  str=$(p6_template_process "share/deployment.yaml" "IMAGE=$image")
+
+  local dir=$(p6_transient_create "p6_template")
+  local outfile="$dir/outfile"
+  p6_file_write "$outfile" "$str"
+
+  kubectl apply -f /tmp/deployment.yaml
+
+  p6_transient_delete "$dir"
 }
