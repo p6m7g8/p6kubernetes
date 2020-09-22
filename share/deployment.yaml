@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: p6dev
+  labels:
+    app: p6dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: p6dev
+  template:
+    metadata:
+      labels:
+        app: p6dev
+    spec:
+      containers:
+        - name: p6dev
+          image: IMAGE
+          tty: true
+          command:
+            - cat
