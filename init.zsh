@@ -65,8 +65,6 @@ p6_kubernetes_deployment_of_image() {
   local dir=$(p6_transient_create "p6_template")
   local outfile="$dir/outfile"
   p6_file_write "$outfile" "$str"
-
-  kubectl apply -f /tmp/deployment.yaml
-
+  kubectl apply -f $outfile
   p6_transient_delete "$dir"
 }
