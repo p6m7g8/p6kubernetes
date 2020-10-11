@@ -14,7 +14,11 @@ p6df::modules::p6kubernetes::version() { echo "0.0.1"; }
 #
 #>
 ######################################################################
-p6df::modules::p6kubernetes::deps() { ModuleDeps=() }
+p6df::modules::p6kubernetes::deps() {
+  ModuleDeps=(
+    p6m7g8/p6common
+  )
+}
 
 ######################################################################
 #<
@@ -56,6 +60,16 @@ p6_kubernetes_prompt_info() {
     fi
 }
 
+######################################################################
+#<
+#
+# Function: p6_kubernetes_deployment_of_image(image)
+#
+#  Args:
+#	image - 
+#
+#>
+######################################################################
 p6_kubernetes_deployment_of_image() {
   local image="$1"
 
