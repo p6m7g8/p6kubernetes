@@ -58,7 +58,7 @@ p6_kubernetes_prompt_info() {
 # Function: p6_kubernetes_deployment_of_image(image)
 #
 #  Args:
-#	image - 
+#	image -
 #
 #>
 ######################################################################
