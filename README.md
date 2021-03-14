@@ -38,9 +38,11 @@
 
 - [Change Log](CHANGELOG.md)
 
-### Usage
+## Usage
 
-#### init.zsh:
+### p6kubernetes:
+
+#### p6kubernetes/init.zsh:
 
 - p6_kubernetes_deployment_of_image(image)
 - p6_kubernetes_prompt_info()
