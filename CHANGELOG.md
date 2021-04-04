@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/p6m7g8/p6kubernetes/compare/v2.1.0...v2.1.1) (2021-04-04)
+
+
+* **link:** remove rendundant symlinks; echo for now ([#19](https://github.com/p6m7g8/p6kubernetes/issues/19)) ([36e5356](https://github.com/p6m7g8/p6kubernetes/commit/36e5356b0583d7bf321b8a3d51dbbba78a3cfd8f))
+* **README:** updates generator ([#18](https://github.com/p6m7g8/p6kubernetes/issues/18)) ([955fda2](https://github.com/p6m7g8/p6kubernetes/commit/955fda23f793869c42195537e7ba460f49c6a709))
+* Coc -> .github ([d57fe96](https://github.com/p6m7g8/p6kubernetes/commit/d57fe96b06578b8fd7534924b26ee7911c6c7c7c))
+
 ## [2.1.0](https://github.com/p6m7g8/p6kubernetes/compare/v2.0.0...v2.1.0) (2020-12-06)
 
 
